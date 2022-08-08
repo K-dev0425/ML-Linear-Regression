@@ -3,12 +3,12 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_validate
 
-credit_data = pd.read_csv("credit_data.csv")
+credit_data = pd.read_csv('credit_data.csv')
 
-features = credit_data[["income", "age", "loan"]]
+features = credit_data[['income', 'age', 'loan']]
 target = credit_data.default
 
-X = np.array(features).reshape(-1 ,3)
+X = np.array(features).reshape(-1, 3)
 y = np.array(target)
 
 model = LogisticRegression()
