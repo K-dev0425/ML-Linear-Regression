@@ -13,13 +13,13 @@ y = np.array([0,0,0,0,0,0,1,1,1,1,1,1]) # 0: blue class, 1: red class
 
 plt.plot(xBlue, yBlue, 'ro', color='blue')
 plt.plot(xRed, yRed, 'ro', color='red')
-plt.plot(1, 5, 'ro', color='green', markersize=15)
+plt.plot(3, 5, 'ro', color='green', markersize=15)
 plt.axis([-0.5, 10, -0.5, 10])
 
 classifier = KNeighborsClassifier(n_neighbors=3)
 classifier.fit(X, y)
 
-predict = classifier.predict(np.array([[1, 5]]))
+predict = classifier.predict(np.array([[3, 5]]))
 print(predict)
 
 plt.show()
