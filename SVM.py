@@ -7,4 +7,5 @@ labels = [1, 1, 1, 0, 0, 0]
 
 classifier.fit(training_points, labels)
 
+print(classifier.predict([[3,2]]))
 print(classifier.support_vectors_)

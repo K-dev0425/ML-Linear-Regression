@@ -1,6 +1,10 @@
+import pandas as pd
+import numpy as np
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import accuracy_score
-from sklearn import datasets
+from sklearn.model_selection import cross_validate
+
+credit_data = pd.read_csv("credit_data.csv")
+
+features = credit_data[["income", "age", "loan"]]
+targets = credit_data.default
 
